@@ -8,17 +8,19 @@ const GlobalNav = ({ NAV }) => {
                     return (
                         <li key={it.id}>
                             <Link to={it.link}>{it.title}</Link>
-                            <ul>
-                                {
-                                    it.submenu?.map((it, idx) => {
-                                        return (
-                                            <li key={idx}>
-                                                <Link to={it.link}>{it.title}</Link>
-                                            </li>
-                                        )
-                                    })
-                                }
-                            </ul>
+                            {
+                                it.submenu && <ul>
+                                    {
+                                        it.submenu.map((it, idx) => {
+                                            return (
+                                                <li key={idx}>
+                                                    <Link to={it.link}>{it.title}</Link>
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            }
                         </li>
                     )
                 })

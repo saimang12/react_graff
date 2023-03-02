@@ -1,3 +1,42 @@
-h1 {
-    color: tomato;
+.header {
+    line-height: 100px;
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.GlobalGnb {
+    &>ul {
+        display: flex;
+        gap: 40px;
+
+        ul {
+            display: none;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            line-height: 40px;
+            background: #f7f7f7;
+
+            width: 150px;
+            text-align: center;
+            border: 3px solid #ddd;
+
+            li~li {
+                border-top: 1px solid #ddd;
+            }
+        }
+
+        &>li {
+            position: relative;
+
+            &:hover ul {
+                display: block;
+            }
+        }
+
+
+    }
 }
