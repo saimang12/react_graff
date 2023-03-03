@@ -55,6 +55,11 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+
+        &.on h2 {
+            transform: translate(0, 100px);
+            transition: 0.5s;
+        }
     }
 
     .inner {
