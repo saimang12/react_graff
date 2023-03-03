@@ -40,3 +40,51 @@
 
     }
 }
+
+.MainSlide {
+
+    //슬라이드 깜박임
+    .slick-track,
+    .slick-list {
+        transition-delay: 0.03s;
+    }
+
+    .itm {
+        position: relative;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .inner {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-shadow: 0 0 1px #000;
+
+        h2 {
+            font-size: 50px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 0 0 20px 0;
+        }
+
+    }
+
+    @for $i from 1 to 4 {
+        @if ($i==2) {}
+
+        .itm0#{$i} {
+            background-image: url(../../public/assets/mainvisual0#{$i}.jpg);
+        }
+
+
+
+    }
+}

@@ -30,7 +30,7 @@ const TopBannerWrapper = styled.div`
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: (-100%,-50%);
+        transform:translate(-100%,-50%);
 
         margin: 0 0 0 600px;
         font-size:30px;

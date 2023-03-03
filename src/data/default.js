@@ -5,9 +5,9 @@ export const DEFAULT = {
 }
 
 export const DEFAULT_CONTENTS = [
-    { id: 1, title: '01.JEWELLERY COLLECTION', description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷' },
-    { id: 2, title: '02.JEWELLERY COLLECTION', description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷' },
-    { id: 3, title: '03.JEWELLERY COLLECTION', description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷' },
+    { id: 1, title: '01.JEWELLERY COLLECTION', description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷', color: '#336699' },
+    { id: 2, title: '02.JEWELLERY COLLECTION', description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷', color: '#331199' },
+    { id: 3, title: '03.JEWELLERY COLLECTION', description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷', color: '#336644' },
 ]
 
 export const NAV = [
@@ -29,11 +29,16 @@ export const NAV = [
     },
     {
         id: 3, title: '컬렉션 & 브라이덜', link: '/',
+        submenu: [
+            { title: '01주얼리 컬렉션', link: '/sub01' },
+            { title: '02주얼리 컬렉션', link: '/sub02' },
+            { title: '03주얼리 컬렉션', link: '/sub03' },
+        ]
     },
     {
         id: 4, title: '웨딩주얼리', link: '/',
     },
     {
         id: 5, title: '특별한 솔리테어', link: '/',
-    },
+    }
 ]
