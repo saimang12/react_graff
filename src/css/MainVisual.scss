@@ -1,0 +1,135 @@
+.MainVisual {
+    position: relative;
+
+    // 슬라이드 깜박임 제거...
+    .slick-track,
+    .slick-list {
+        transition-delay: 30ms;
+    }
+
+    .itm {
+        position: relative;
+        height: 600px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .inner>* {
+            transform: translate(0, 100px);
+            opacity: 0;
+            transition-duration: 0.5s;
+        }
+
+        &.on .inner>* {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+        .inner {
+            position: absolute;
+            inset: 50% auto auto 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-shadow: 0 0 1px #000;
+
+            h2 {
+                font-size: 50px;
+                font-weight: 700;
+                margin: 0 0 10px 0;
+                transition-delay: 0.5s;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+
+    @for $i from 1 to 4 {
+        @if($i==2) {
+            .itm0#{$i} .inner {
+                color: #333;
+            }
+        }
+
+        .itm0#{$i} {
+            background-image: url(../../public/assets/mainvisual0#{$i}.jpg);
+        }
+    }
+
+    .num {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        margin: 0 0 0 600px;
+        transform: translate(-100%, 0);
+        color: #fff;
+        text-shadow: 0 0 1px #000;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .dots {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        display: flex;
+        gap: 4px;
+
+        li button {
+            font-size: 0;
+            width: 20px;
+            height: 20px;
+            background: tomato;
+            border-radius: 50%;
+
+            border: none;
+            outline: none;
+        }
+
+        li.on button {
+            background: #fff;
+        }
+    }
+
+    .arrows>* {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        font-size: 0;
+        border: none;
+        outline: none;
+        background: transparent;
+
+        width: 100px;
+        height: 100px;
+
+
+        &.prev {
+            margin: 0 0 0 -700px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        &.next {
+            margin: 0 0 0 700px;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+    }
+
+    .tab {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translate(-100%, 0);
+        margin: 0 0 0 600px;
+        color: #fff;
+    }
+
+}

@@ -1,67 +1,64 @@
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import MainSlide from "react-slick";
 import "slick-carousel/slick/slick.css";
-import { Inner, BTN } from "./common";
+import MainSlide from "react-slick";
+import { BTN, Inner } from "./common";
+import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import '../css/MainVisual.scss';
+
+
 
 const MainVisual = ({ DEFAULT_CONTENTS }) => {
     const option = {
         arrows: false,
-        afterChange: (idx) => {
-            console.log(idx)
-            setSNum(idx)
-        }
+        afterChange: idx => setSNum(idx)
     }
-    //document.queryselector
+
     const s = useRef(null);
-    const [sNum, setSNum] = useState()
+    const [sNum, setSNum] = useState();
 
     useEffect(() => {
         setSNum(0);
-
     }, [])
 
     return (
         <section className="MainVisual">
-            <MainSlide {...option} ref={s} className="MainSlide">
+            <MainSlide
+                {...option}
+                ref={s}
+                className={`MainSlide`}
+            >
                 {
-                    DEFAULT_CONTENTS.map((it, idx) => {
+                    DEFAULT_CONTENTS.map((slideItm, slideIndx) => {
                         return (
-                            <div key={idx} className={`itm itm0${idx + 1} ${idx === sNum ? 'on' : ''}`}>
+                            <div key={slideIndx} className={`itm itm0${slideIndx + 1} ${slideIndx === sNum ? 'on' : ''}`}>
                                 <Inner className="inner">
-                                    <h2>{it.title}</h2>
-                                    <p>{it.description}</p>
-                                    <BTN color={it.color}><Link to='/'>more</Link></BTN>
+                                    <h2>{slideItm.title}</h2>
+                                    <p>{slideItm.description}</p>
+                                    <BTN color={slideItm.color}><Link to='/'>more</Link></BTN>
                                 </Inner>
                             </div>
                         )
                     })
                 }
-
             </MainSlide>
-            <div className="tab">
-                {DEFAULT_CONTENTS[sNum]?.title}
-            </div>
+            <div className="tab">{DEFAULT_CONTENTS[sNum]?.title}</div>
             <div className="arrows">
-                <button onClick={() => s.current.slickPrev()}>뒤로가기</button>
-                <button onClick={() => s.current.slickNext()}>앞으로가기</button>
-                {console.log(s.current)}
+                <button onClick={() => s.current.slickPrev()} className="prev">뒤로가기</button>
+                <button onClick={() => s.current.slickNext()} className="next">앞로가기</button>
             </div>
             <div className="num">
-                {sNum + 1} / {DEFAULT_CONTENTS.length}
+                <strong>{sNum && (sNum + 1)}</strong> / <span>{DEFAULT_CONTENTS.length}</span>
             </div>
+
             <ul className="dots">
                 {
-                    DEFAULT_CONTENTS.map((_, idx) => {
+                    DEFAULT_CONTENTS.map((_, slideIndx) => {
                         return (
-                            <li className={`${idx + 1} ${idx === sNum ? 'on' : ''}`}>
-                                <button onClick={() => { s.current.slickGoTo(idx) }}>{idx + 1}</button>
-                            </li>
+                            <li className={slideIndx === sNum ? 'on' : ''} key={slideIndx}><button onClick={() => s.current.slickGoTo(slideIndx)}>{slideIndx + 1}</button></li>
                         )
                     })
                 }
             </ul>
-
         </section>
     )
 }

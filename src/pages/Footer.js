@@ -1,8 +1,11 @@
-import GlobalNav from "./GlobalNav";
+import GlobalNav from "./GlobalNav"
 
 const Footer = ({ DEFAULT, NAV }) => {
     return (
-        <GlobalNav NAV={NAV} />
+        <footer>
+            <GlobalNav NAV={NAV} />
+        </footer>
     )
 }
+
 export default Footer;
