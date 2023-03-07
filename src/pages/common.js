@@ -17,3 +17,8 @@ ${props => props.color && css`
 `}
 
 `
+
+export const DEFAULT_SECTION = styled.section`
+    padding: 100px 0;
+    text-align: center;
+`
