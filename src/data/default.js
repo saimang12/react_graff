@@ -2,6 +2,20 @@ export const DEFAULT = {
     company: 'Graff France',
     tel: '33 (1) 83 75 54 54',
     address: 'Headquarters 237 rue Saint-Honore Paris 75001',
+    service: [
+        { title: '이용약관', link: '/' },
+        { title: '문의하기', link: '/' },
+        { title: '개인정보 취급방침', link: '/' },
+        { title: '방문 예약하기', link: '/' },
+        { title: '사이즈 가이드', link: '/' },
+        { title: '그라프 하우스 소개', link: '/' },
+    ],
+    familyLink: [
+        { title: 'FamilyLink', link: '' },
+        { title: 'instagram', link: '/i' },
+        { title: 'facebook', link: '/f' },
+        { title: 'kakao', link: '/k' },
+    ]
 }
 
 export const DEFAULT_PRODUCT = [
@@ -41,19 +55,19 @@ export const DEFAULT_CONTENTS = [
     {
         id: 1,
         title: '01.JEWELLERY COLLECTION',
-        description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷1',
+        description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷',
         color: '#336699',
     },
     {
         id: 2,
         title: '02.JEWELLERY COLLECTION',
-        description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷2',
+        description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷',
         color: '#663399',
     },
     {
         id: 3,
         title: '03.JEWELLERY COLLECTION',
-        description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷3',
+        description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷',
         color: '#996633',
     }
 ]

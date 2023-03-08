@@ -1,4 +1,6 @@
 import { DEFAULT, DEFAULT_CONTENTS, NAV, DEFAULT_PRODUCT } from "./data/default";
+import { notice } from "./data/notice";
+import { event } from "./data/event";
 import Footer from "./pages/Footer";
 import Header from "./pages/Header";
 import MainBanner from "./pages/MainBanner";
@@ -20,8 +22,8 @@ const App = () => {
             {/* <MainMovie DEFAULT_CONTENTS={DEFAULT_CONTENTS} /> */}
             {/* <MainYoutube /> */}
             <MainProduct DEFAULT_PRODUCT={DEFAULT_PRODUCT} DEFAULT_CONTENTS={DEFAULT_CONTENTS} />
-            <MainTab DEFAULT_PRODUCT={DEFAULT_PRODUCT} DEFAULT_CONTENTS={DEFAULT_CONTENTS} />
-            {/* <Footer DEFAULT={DEFAULT} NAV={NAV} /> */}
+            <MainTab notice={notice} event={event} DEFAULT_CONTENTS={DEFAULT_CONTENTS} />
+            <Footer DEFAULT={DEFAULT} NAV={NAV} />
         </>
     )
 }

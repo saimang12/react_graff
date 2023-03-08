@@ -14,11 +14,7 @@ const MainVisual = ({ DEFAULT_CONTENTS }) => {
     }
 
     const s = useRef(null);
-    const [sNum, setSNum] = useState();
-
-    useEffect(() => {
-        setSNum(0);
-    }, [])
+    const [sNum, setSNum] = useState(0);
 
     return (
         <section className="MainVisual">
@@ -47,7 +43,7 @@ const MainVisual = ({ DEFAULT_CONTENTS }) => {
                 <button onClick={() => s.current.slickNext()} className="next">앞로가기</button>
             </div>
             <div className="num">
-                <strong>{sNum && (sNum + 1)}</strong> / <span>{DEFAULT_CONTENTS.length}</span>
+                <strong>{sNum + 1}</strong> / <span>{DEFAULT_CONTENTS.length}</span>
             </div>
 
             <ul className="dots">

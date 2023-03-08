@@ -1,8 +1,6 @@
-import { useRef, useState } from 'react';
 import YouTube from 'react-youtube';
 
 const MainYoutube = () => {
-
 
     const option = {
         width: '100%',
@@ -13,13 +11,14 @@ const MainYoutube = () => {
             mute: 1,
             controls: 0,
             loop: 1,
+            showinfo: 0,
         },
     }
 
 
     return (
         <>
-            <YouTube videoId="2g811Eo7K8U" opts={option} />
+            <YouTube videoId="raw3Nu0_mBQ" opts={option} />
         </>
     )
 }
