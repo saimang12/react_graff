@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/saimang12/react_graff.git/static/css/main.d848bc6b.css",
+    "main.js": "/saimang12/react_graff.git/static/js/main.395929c4.js",
+    "static/media/mainvisual02.jpg": "/saimang12/react_graff.git/static/media/mainvisual02.7ed387b0bba63750dc1f.jpg",
+    "static/media/mainvisual01.jpg": "/saimang12/react_graff.git/static/media/mainvisual01.de6445f47ca5c7eeb331.jpg",
+    "static/media/mainvisual03.jpg": "/saimang12/react_graff.git/static/media/mainvisual03.0f235368fbc6d422516f.jpg",
+    "index.html": "/saimang12/react_graff.git/index.html",
+    "main.d848bc6b.css.map": "/saimang12/react_graff.git/static/css/main.d848bc6b.css.map",
+    "main.395929c4.js.map": "/saimang12/react_graff.git/static/js/main.395929c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d848bc6b.css",
+    "static/js/main.395929c4.js"
+  ]
+}
