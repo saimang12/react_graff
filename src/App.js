@@ -11,6 +11,7 @@ import MainTab from "./pages/MainTab";
 import MainVisual from "./pages/MainVisual";
 import MainYoutube from "./pages/MainYoutube";
 import TopBanner from "./pages/TopBanner";
+import ToTop from "./pages/ToTop";
 const App = () => {
     return (
         <>
@@ -24,6 +25,7 @@ const App = () => {
             <MainProduct DEFAULT_PRODUCT={DEFAULT_PRODUCT} DEFAULT_CONTENTS={DEFAULT_CONTENTS} />
             <MainTab notice={notice} event={event} DEFAULT_CONTENTS={DEFAULT_CONTENTS} />
             <Footer DEFAULT={DEFAULT} NAV={NAV} />
+            <ToTop />
         </>
     )
 }
